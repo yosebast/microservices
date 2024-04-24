@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class OrderEventListener {
 
-    @KafkaListener(topics = "orders-topic")
+    @KafkaListener(topics = "orders-topic2")
     public void handleOrdersNotifications(String message) {
         var orderEvent = JsonUtils.fromJson(message, OrderEvent.class);
 
